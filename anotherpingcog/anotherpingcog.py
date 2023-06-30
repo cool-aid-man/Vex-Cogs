@@ -83,7 +83,7 @@ class AnotherPingCog(commands.Cog):
         await ctx.send(await format_info(ctx, self.qualified_name, self.__version__))
 
     # cspell:disable-next-line
-    @commands.hybrid_command(aliases=["pinf", "pig", "png", "pign", "pjgn", "ipng", "pgn", "pnig"])
+    @commands.hybrid_command(aliases=["pinf", "png", "pign", "pjgn", "ipng", "pgn", "pnig"])
     async def ping(self, ctx: commands.Context):
         """
         A rich embed ping command with timings.
