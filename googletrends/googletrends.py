@@ -24,7 +24,7 @@ class GoogleTrends(commands.Cog, TrendsPlot, metaclass=CompositeMetaClass):
     """
 
     __version__ = "1.1.0"
-    __author__ = "Vexed#0714"
+    __author__ = "@vexingvexed"
 
     def __init__(self, bot):
         self.bot = bot
@@ -121,6 +121,14 @@ class GoogleTrends(commands.Cog, TrendsPlot, metaclass=CompositeMetaClass):
                     )
                 else:
                     await ctx.send("Your request failed for an unexpected reason.")
+                return
+
+            # temporary
+            except TypeError:
+                await ctx.send(
+                    "This cog is currently broken due to waiting for an upstream library to be "
+                    "updated."
+                )
                 return
 
             try:
